@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>保安登录</title>
+  <!-- for-mobile-apps -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+  function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!-- //for-mobile-apps -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- js -->
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <!-- //js -->
+
+
+  <!-- font-awesome icons -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- //font-awesome icons -->
+  <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body onkeydown="show()">
+<div class="header w3layouts">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header navbar-left">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1><a style="font-family: STFangsong" class="navbar-brand" href="主界面.html">保卫处在线</a></h1>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+        <nav class="cl-effect-13" id="cl-effect-13">
+ 						<ul class="nav navbar-nav">
+							<li><a href="主界面.html">主页</a></li>
+							<li><a href="我要求助.html">我要求助</a></li>
+							<li><a href="个人中心.html">个人中心</a></li>
+							<li><a href="近期情况.html">近期情况</a></li>
+						</ul>
+        </nav>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- banner -->
+	<script language =javascript >
+var curIndex=0;
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在images文件夹下。
+var timeInterval=2000;
+var arr=new Array();
+arr[0]="images/1.png";
+arr[1]="images/2.png";
+arr[2]="images/3.png";
+arr[3]="images/4.png";
+arr[4]="images/5.png";
+setInterval(changeImg,timeInterval);
+function changeImg()
+{
+var obj=document.getElementById("obj");
+if (curIndex==arr.length-1)
+{
+curIndex=0;
+}
+else
+{
+curIndex+=1;
+}
+obj.src=arr[curIndex];
+}
+</script>
+<div align="center" class="clearfix"><img id=obj src ="images/1.png" width="100%" height=400 border =0>
+	 <br/> <br/>  <br/>
+	<h2 class="w3l_head w3l_head1">保安登录</h2>
+
+				<form action="#" method="post">
+					<span class="input input--jiro">
+						<input class="input__field input__field--jiro" type="text" id="input-10" name="Username" placeholder="请输入用户名" required="">
+						<label class="input__label input__label--jiro" for="input-10">
+							<span class="input__label-content input__label-content--jiro">用户名</span>
+						</label>
+					</span>
+          <br/>
+					<span class="input input--jiro">
+						<input class="input__field input__field--jiro" type="password" id="input-12" name="Password" placeholder="请输入密码" required="">
+						<label class="input__label input__label--jiro" for="input-12">
+							<span class="input__label-content input__label-content--jiro">密码</span>
+						</label>
+					</span>
+          <br/><br/><br/><br/><br/>
+                    <script type="text/javascript">
+                        var tiaozhuan = function(){
+                            var pw,i;
+                            i = document.getElementById("input-12").value;
+                            pw = 'admin';
+                            if(i == pw) {
+                                document.location.href = '我是保安主界面.html?mydata1=' + $("#input-10").val();
+                            }
+                            else{
+                                alert('密码错误，请重新输入！')
+                            }
+                        }
+                        function show(){
+                            var e = window.event?window.event:event;
+                            if(e.keyCode == 13){
+                                tiaozhuan();
+                            }
+                        }
+                    </script>
+            <input type="button" value="登录" style="text-align: center" onclick="tiaozhuan()">
+                    <br/><br/><br/>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/classie.js"></script>
+	<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+
+
+<!-- footer -->
+<div class="agileinfo_footer_bottom">
+  <div class="container">
+    <div class="col-md-4 agileinfo_footer_bottom_grid">
+      <h3>联系我们</h3>
+      <ul>
+        <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 上海交通大学保卫处</li>
+        <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>邮编：200030</li>
+        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 54749110</li>
+      </ul>
+
+    </div>
+
+    <div class="col-md-4 agileinfo_footer_bottom_grid">
+      <h3>相关网站</h3>
+      <p><a href="http://electsys.sjtu.edu.cn/edu/">教学信息服务网</a></p>
+    </div>
+    <div class="col-md-4 agileinfo_footer_bottom_grid">
+      <h3>校园风景</h3>
+      <div class="flickr-grids">
+        <div class="flickr-grid agileits_w3layouts_flickr">
+          <a href="#"><img src="images/2.jpg" alt=" " class="img-responsive"></a>
+        </div>
+        <div class="flickr-grid  agileits_w3layouts_flickr">
+          <a href="#"><img src="images/3.jpg" alt=" " class="img-responsive"></a>
+        </div>
+        <div class="flickr-grid  agileits_w3layouts_flickr">
+          <a href="#"><img src="images/4.jpg" alt=" " class="img-responsive"></a>
+        </div>
+        <div class="clearfix"> </div>
+
+        <div class="flickr-grid  agileits_w3layouts_flickr">
+          <a href="#"><img src="images/5.jpg" alt=" " class="img-responsive"></a>
+        </div>
+        <div class="flickr-grid  agileits_w3layouts_flickr">
+          <a href="#"><img src="images/6.jpg" alt=" " class="img-responsive"></a>
+        </div>
+        <div class="flickr-grid  agileits_w3layouts_flickr">
+          <a href="#"><img src="images/7.jpg" alt=" " class="img-responsive"></a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<!-- //footer -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>
