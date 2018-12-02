@@ -1186,6 +1186,7 @@ h3.agileits-icons-title {
 .well {
     font-weight: 300;
     font-size: 14px;
+    overflow: hidden;
 }
 .list-group-item {
     font-weight: 300;
