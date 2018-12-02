@@ -12,7 +12,8 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js">
+</script>
 <!-- //js -->
 <!-- font-awesome icons -->
 <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -60,26 +61,39 @@
 
 <br/>
 <br/>
-<div class="container" style="width:800px; height:300px; text-align: center">
-<form name="form1" action="SEARCH.php" method="post" enctype="text/plain" >
-<p>
-  <center>
-	  <h3><strong>请输入您的学号，以查看您的所有求助记录</strong></h3>
-	  <br/>
-	  <p>您的学号： 
-	    <input type="text" name="text2" size="20" maxlength="12" >
-      </p>
-  </center>
- </p>
-<br/>
+<div class="container" style="width:800px; height:200px; text-align: center">
+	<!--<form name="form1" action="mailto:904457224@qq.com" method="post" enctype="text/plain" >-->
+    <p>
+          <h3><strong>请输入您的学号，以查看您的所有求助记录</strong></h3>
+          <br/>
+          <p>您的学号：
+            <input type="text" name="text2" size="20" maxlength="12" >
+          </p>
+     </p>
+    <br/>
 
-<p align="center"> 
-<input type="submit" name="提交" value="提 交">
-<input type="reset" name="重写" value="重 写">
-</p>
-</form>
-</div>
-<!-- //icons -->
+    <p align="center">
+    <input type="button" name="提交" value="提 交" onclick="display()">
+    <input type="reset" name="重写" value="重 写" onclick="hide()">
+    </p>
+	<!--</form>-->
+    </div>
+	<div class="container" id="lb" style="display:none">
+        <div class="well" style="min-height: 100px">
+            <strong><p id="time">时间:</p></strong>
+            <div id="content" style="width: 800px; float: left">求助内容：</div>
+            <div id="image" style="width: 280px; float: right"><img src="images/1.jpg" width="270px" onclick="javascript:window.open(this.src)" style="cursor: pointer">这里是图片</div>
+        </div>
+	</div>
+	<script>
+        function display(){
+			document.getElementById('lb').style.display="block";
+        }
+        function hide(){
+            document.getElementById('lb').style.display="none";
+        }
+	</script>
+    <!-- //icons -->
 	<!-- footer -->
 	<div class="agileinfo_footer_bottom">
 		<div class="container">
@@ -95,10 +109,10 @@
 
 			<div class="col-md-4 agileinfo_footer_bottom_grid">
 				<h3>相关网站</h3>
-				<p><a href="http://electsys.sjtu.edu.cn/edu/">教学信息服务网</p>
+				<p><a href="http://electsys.sjtu.edu.cn/edu/">教学信息服务网</a></p>
 			</div>
 			<div class="col-md-4 agileinfo_footer_bottom_grid">
-				<h3>校园风景</h3>
+				<h3>一些图片</h3>
 				<div class="flickr-grids">
 					<div class="flickr-grid agileits_w3layouts_flickr">
 						<a href="#"><img src="images/2.jpg" alt=" " class="img-responsive"></a>
