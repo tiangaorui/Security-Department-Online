@@ -6,6 +6,7 @@
 
 后端：田矿佳、张佳乐、肖鹏宇、田浩林
 
+
 This project aims to accomplish several services of Security Department online.
 功能简介：这是上海交通大学保卫处的mini网页版本，可以处理非紧急情况下同学们的求助，旨在以简洁的形式提供高效的服务，增加用户体验。
 目前实现的功能有同学端（1）提交求助信息（2）查看已提交记录；保安端（1）登录（静态密码）（2）查看消息列表（3）回复消息。
