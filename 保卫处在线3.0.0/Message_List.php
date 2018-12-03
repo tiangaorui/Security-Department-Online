@@ -61,11 +61,12 @@ $MAX_PAGE=($MAX_ROW-$REST)/5+1;//最大页面数
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <nav class="cl-effect-13" id="cl-effect-13">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">主页</a></li>
-                        <li><a href="我要求助.html">我要求助</a></li>
-                        <li><a href="Personal_Center.php">个人中心</a></li>
-
-                        <li><a href="近期情况.html">近期情况</a></li>
+                        <li class="active" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">保安你好！ <b class="caret"></b></a>
+                            <ul class="dropdown-menu agile_short_dropdown">
+                                <li><a href="保安登录.html">退出</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                 </nav>

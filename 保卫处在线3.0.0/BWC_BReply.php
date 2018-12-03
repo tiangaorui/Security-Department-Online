@@ -121,7 +121,7 @@ $_SESSION['number']=$number;
                 <nav class="cl-effect-13" id="cl-effect-13">
                     <ul class="nav navbar-nav">
                         <li class="active" class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">XX保安你好！ <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">保安你好！ <b class="caret"></b></a>
                             <ul class="dropdown-menu agile_short_dropdown">
                                 <li><a href="保安登录.html">退出</a></li>
                             </ul>
